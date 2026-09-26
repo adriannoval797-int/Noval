@@ -1,8 +1,8 @@
 # Personal Task Manager (Laravel)
 
 Project Code: WST21-PM-2026-SF
-Student Name: [Adrian Noval]
-Course & Year: [BSIT 2]
+Student Name: Adrian Noval
+Course & Year: BSIT 2
 Database Used: MySQL
 
 Features:
