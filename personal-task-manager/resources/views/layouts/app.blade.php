@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Task Manager</title>
-
-    {{-- Bootstrap via CDN: no npm / build step needed for this project --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f4f6f9; }
@@ -17,24 +15,18 @@
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-dark bg-dark mb-4">
         <div class="container">
             <a class="navbar-brand" href="{{ route('tasks.index') }}">📋 Personal Task Manager</a>
         </div>
     </nav>
-
     <div class="container">
-
-        {{-- Flash success message, set via ->with('success', ...) in the controller --}}
         @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('success') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         @endif
-
-        {{-- Validation error messages, if any --}}
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul class="mb-0">
@@ -44,12 +36,8 @@
                 </ul>
             </div>
         @endif
-
-        {{-- Each page (index, create, edit) injects its own content here --}}
         @yield('content')
-
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
